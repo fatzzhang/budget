@@ -10,10 +10,9 @@ $f3->set('CACHE', __DIR__ . '/../../cache');
 // AutoLoad
 // $f3->set('AUTOLOAD', __DIR__ . '/../modules/;/../cores/;/../vendor/');
 
-\FATZ\Page::main();die();
-
 //env detect
 if (isDev()) {
+    $env = 'developement';
     $f3->set('DEBUG', 3);
     $f3->set('ONERROR', function ($f3) {
         $err = $f3->get('ERROR');
@@ -31,6 +30,7 @@ if (isDev()) {
 
     });
 } else {
+    $env = 'production';
     $f3->set('DEBUG', 0);
     $f3->set('ONERROR', function ($f3) {
         $err = $f3->get('ERROR');
@@ -44,7 +44,7 @@ if (isDev()) {
 }
 
 //config
-$f3->config(__DIR__ . '/../configs/' . $f3->get('enviromnment') . '.cfg');
+$f3->config(__DIR__ . '/../configs/' . $env . '.cfg');
 
 //route
 $f3->config(__DIR__ . '/../configs/routes.cfg');
