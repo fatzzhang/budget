@@ -1,4 +1,4 @@
-CREATE table `item` (
+CREATE TABLE `item` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT, 
   `name` varchar(20) NOT NULL,
   `price` INT NOT NULL,
@@ -9,3 +9,4 @@ CREATE table `item` (
   `update_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
