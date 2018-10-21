@@ -14,24 +14,24 @@ class Loader
 
     public static function register()
     {
-        if (function_exists(__autolad())) {
-            spl_autoload_register(__autolad());
+        if (function_exists('__autolad')) {
+            spl_autoload_register('__autolad');
         }
 
-        spl_autoload_register(['Loader', 'load']);
+        spl_autoload_register(['\FATZ\Loader', 'load']);
     }
 
     private static function load($class)
     {
-        if (class_exists($class) || !preg_match('\\' . self::NS . '\i', $class)) {
+        if (class_exists($class) || !preg_match('#' . self::NS . '#i', $class)) {
             return false;
         };
         $classArr = explode('\\', $class);
         $classname = end($classArr);
         $type = substr($classname, 0, 1);
         $module = substr($classname, 1);
-        if (in_array($type, self::TYPE)) {
-            $filename = __DIR__ . '/../modules/' . $module . '/' . self::TYPE[$type] . '.php';
+        if (in_array($type, self::TYPES)) {
+            $filename = __DIR__ . '/../modules/' . $module . '/' . self::TYPES[$type] . '.php';
         } else if (in_array($classname, self::CORES)) {
             $filename = __DIR__ . '/../cores/' . $classname . '.php';
         } else {
@@ -44,4 +44,9 @@ class Loader
             return false;
         }
     }
+}
+
+Loader::register();
+{
+
 }
