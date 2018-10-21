@@ -1,14 +1,30 @@
 *{
-  border: 1px solid #000
-
-/*  vertical-align: middle
-  position: relative
-  box-sizing: border-box
-  font-family: 微軟正黑體*/
+  /*border: 1px solid #000;*/
+  vertical-align: middle;
+  position: relative;
+  box-sizing: border-box;
+  font-family: 微軟正黑體;
 }
- html,body
+ html,body{
 
+ }
+.page{
+	padding: 100px	
+}
  h1{
  	color: red;
  }
- 	
+ h4{
+ 	/*text-align: center;*/
+ 	margin: 30px;
+ 	width: 70%;
+ 	}
+ hr{
+ 	background-color: linear-gradient(right, #ccc, #333, #ccc);
+ }
+ #buyWT,#span{
+ 	margin: 20px 50px;
+ 	width: 70%;
+ }
+
+ /*linear-gradient(to right, #ccc, #333, #ccc);*/
