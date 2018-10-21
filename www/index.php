@@ -5,7 +5,12 @@ require_once __DIR__ . '/../cores/Helper.php';
 
 $f3 = \Base::instance();
 
-$f3->set('CACHE', __DIR__ . '/../cache');
+$f3->set('CACHE', __DIR__ . '/../../cache');
+
+// AutoLoad
+// $f3->set('AUTOLOAD', __DIR__ . '/../modules/;/../cores/;/../vendor/');
+
+\FATZ\Page::main();die();
 
 //env detect
 if (isDev()) {
@@ -20,10 +25,11 @@ if (isDev()) {
                 'trace' => $err['trace'],
             ]);
         } else {
-            \FATZ\Page::_echo();
+            echo json_encode($err);
+            // \FATZ\Page::_echo();
         }
 
-    })
+    });
 } else {
     $f3->set('DEBUG', 0);
     $f3->set('ONERROR', function ($f3) {
@@ -34,7 +40,7 @@ if (isDev()) {
             'text' => $err['text'],
             'trace' => $err['trace'],
         ]);
-    })
+    });
 }
 
 //config
