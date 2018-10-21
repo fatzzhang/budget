@@ -1,5 +1,6 @@
 {
     "require": {
-        "bcosca/fatfree": "^3.6"
+        "bcosca/fatfree": "^3.6",
+        "catfan/medoo": "^1.6"
     }
 }
