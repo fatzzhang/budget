@@ -1,0 +1,11 @@
+CREATE table `item` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+  `name` varchar(20) NOT NULL,
+  `price` INT NOT NULL,
+  `status` ENUM('normal', 'delete') NOT NULL DEFAULT 'normal',
+  `insert_ts` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `insert_id` INT UNSIGNED NOT NULL,
+  `update_ts` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  `update_id` INT UNSIGNED NOT NULL,
+  PRIMARY KEY(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

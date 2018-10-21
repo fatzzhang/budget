@@ -47,6 +47,3 @@ class Loader
 }
 
 Loader::register();
-{
-
-}
