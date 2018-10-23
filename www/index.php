@@ -5,7 +5,7 @@ require_once __DIR__ . '/../cores/Helper.php';
 
 $f3 = \Base::instance();
 
-$f3->set('CACHE', __DIR__ . '/../../cache');
+$f3->set('TEMP', __DIR__ . '/../tmps/');
 
 // AutoLoad
 // $f3->set('AUTOLOAD', __DIR__ . '/../modules/;/../cores/;/../vendor/');
