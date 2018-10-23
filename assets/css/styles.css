@@ -11,6 +11,9 @@
 .page{
 	padding: 100px	
 }
+.data{
+	/*border: 1px solid #000;*/
+}
  h1{
  	color: red;
  }
