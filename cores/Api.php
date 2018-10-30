@@ -8,13 +8,11 @@ class Api
 
     }
 
-    public static function do_rerouter($f3, $args)
+    public function do_rerouter($f3, $args)
     {
-        echo 123;die();
         try {
             // Create an instance of the module class.
             $class = '\FATZ\a' . ucfirst($args['module']);
-
             if (!isset($args['action'])) {
                 $method = sprintf('do_%s', $args['method']);
             } else {

@@ -5,6 +5,7 @@ class aItem extends Api
 {
     public static function do_list()
     {
+        echo 99;die();
         // $data = mItem::all();
         echo json_encode([
             'code' => 0,
