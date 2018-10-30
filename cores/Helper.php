@@ -8,21 +8,22 @@ function f3()
 function md()
 {
     $config = f3()->get('db_md');
+    // var_dump($config);die();
     return new \Medoo\Medoo([
         // required
-        'database_type' => 'mysql',
-        'database_name' => 'name',
-        'server' => 'localhost',
-        'username' => 'your_username',
-        'password' => 'your_password',
+        'database_type' => $config['database_type'],
+        'database_name' => $config['database_name'],
+        'server' => $config['server'],
+        'username' => $config['username'],
+        'password' => $config['password'],
 
         // [optional]
-        'charset' => 'utf8mb4',
-        'collation' => 'utf8mb4_general_ci',
-        'port' => 3306,
+        'charset' => $config['charset'],
+        'collation' => $config['collation'],
+        'port' => $config['port'],
 
         // [optional] Table prefix
-        'prefix' => 'PREFIX_',
+        // 'prefix' => $config['prefix'],
     ]);
 }
 

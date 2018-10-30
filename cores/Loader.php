@@ -4,7 +4,7 @@ namespace FATZ;
 class Loader
 {
     const NS = 'FATZ';
-    const CORES = ['Modules', 'Api', 'Model', 'Page', 'Kit'];
+    const CORES = ['Module', 'Api', 'Model', 'Page', 'Kit'];
     const TYPES = [
         'a' => 'api',
         'm' => 'model',
