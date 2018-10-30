@@ -30,10 +30,13 @@ class Loader
         $classname = end($classArr);
         $type = substr($classname, 0, 1);
         $module = substr($classname, 1);
-        if (in_array($type, self::TYPES)) {
+
+        if (array_key_exists($type, self::TYPES)) {
             $filename = __DIR__ . '/../modules/' . $module . '/' . self::TYPES[$type] . '.php';
+
         } else if (in_array($classname, self::CORES)) {
             $filename = __DIR__ . '/../cores/' . $classname . '.php';
+
         } else {
             $filename = __DIR__ . '/../libs/' . $classname . '.php';
         }
