@@ -1,33 +1,45 @@
-*{
-  /*border: 1px solid #000;*/
-  vertical-align: middle;
-  position: relative;
-  box-sizing: border-box;
-  font-family: 微軟正黑體;
+* {
+    /*border: 1px solid #000;*/
+    vertical-align: middle;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 微軟正黑體;
 }
- html,body{
 
- }
-.page{
-	padding: 100px	
+html,
+body {
+    border: 1px solid #000;
 }
-.data{
-	/*border: 1px solid #000;*/
-}
- h1{
- 	color: red;
- }
- h4{
- 	/*text-align: center;*/
- 	margin: 30px;
- 	width: 70%;
- 	}
- hr{
- 	background-color: linear-gradient(right, #ccc, #333, #ccc);
- }
- #buyWT,#span{
- 	margin: 20px 50px;
- 	width: 70%;
- }
 
- /*linear-gradient(to right, #ccc, #333, #ccc);*/
+.page {
+    padding: 100px
+}
+
+.data {
+    /* border-bottom: 1px solid #000; */
+    padding-bottom: 10px;
+}
+
+h1 {
+    color: red;
+}
+
+h4 {
+    /*text-align: center;*/
+    margin: 30px;
+    width: 70%;
+}
+
+hr {
+    background-color: linear-gradient(right, #ccc, #333, #ccc);
+}
+
+#buyWT,
+#span,
+#note {
+    margin: 20px 50px;
+    width: 70%;
+}
+
+
+/*linear-gradient(to right, #ccc, #333, #ccc);*/
