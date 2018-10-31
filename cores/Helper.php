@@ -23,7 +23,7 @@ function md()
         'port' => $config['port'],
 
         // [optional] Table prefix
-        // 'prefix' => $config['prefix'],
+        'prefix' => $config['prefix'],
     ]);
 }
 
