@@ -3,8 +3,9 @@ namespace FATZ;
 
 class mItem extends Model
 {
-    public static function all()
+    const MT = 'item';
+    public static function lots()
     {
-
+        return parent::result();
     }
 }

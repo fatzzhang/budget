@@ -3,9 +3,15 @@ namespace FATZ;
 
 class Api
 {
-    public static function _return()
+    public static function _return($code, $data = [])
     {
+        header('Content-Type: application/json');
 
+        echo json_encode([
+            'code' => intval($code),
+            'data' => $data,
+        ]);
+        exit;
     }
 
     public function do_rerouter($f3, $args)

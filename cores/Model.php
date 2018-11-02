@@ -1,5 +1,5 @@
 <?php
-namespace HUNGER;
+namespace FATZ;
 
 class Model extends Module
 {
