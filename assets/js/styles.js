@@ -12,6 +12,46 @@
 // document.getElementById("demo").innerHTML = x[1].innerHTML;
 // document.getElementById("demo").innerHTML = 55555;
 
+$.ajax({
+        url: 'http://local.budget.tw/api/item/list',
+        type: 'post',
+        data: { id: 1 },
+        success: function(response) {
+            console.log(response);
+            console.log(response.data[0].name);
+            // var a = 0;
+
+            // response.data.forEach(function(a) {
+            //     var res1 = $('<td></td>').text(a.name);
+            //     var res2 = $('<td></td>').text(a.price);
+            //     var res3 = $('<td></td>').text(a.status);
+            //     var res4 = $("<td class='btn btn-danger'></td>").text("delete")
+            //     var addres = $('<tr></tr>').append(res1, res2, res3, res4);
+            //     $("tbody").append(addres);
+            // })
+
+
+            for (var a = 0; a < response.data.length; a++) {
+                var res1 = $('<td></td>').text(response.data[a].name);
+                var res2 = $('<td></td>').text(response.data[a].price);
+                var res3 = $('<td></td>').text(response.data[a].status);
+                var res4 = $("<td class='btn btn-danger'></td>").text("delete")
+                var addres = $('<tr></tr>').append(res1, res2, res3, res4);
+                $("tbody").append(addres);
+                // a = a + 1;
+            }
+
+        }
+
+    })
+    //get post delete put ...
+
+// {
+//     code: 0,
+//     data: [{}, {}, {}]
+// }
+
+
 $("#definite").click(
     function() {
         var x = $("#buyWT").val();
