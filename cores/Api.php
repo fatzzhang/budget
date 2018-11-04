@@ -3,6 +3,30 @@ namespace FATZ;
 
 class Api
 {
+    public static function _getReq($method, $allow = [])
+    {
+        $data = f3()->get(strtoupper($method));
+        foreach ($data as $k => $v) {
+            if (in_array($k, $allow)) {
+                $data[$k] = is_string($v) ? trim($v) : $v;
+            } else {
+                unset($data[$k]);
+            }
+        }
+        return $data;
+    }
+
+    public static function _chkReq($req, $need)
+    {
+        foreach ($need as $v) {
+            if (!isset($req[$v])) {
+                self::_return(8100);
+            }
+        }
+
+        return true;
+    }
+
     public static function _return($code, $data = [])
     {
         header('Content-Type: application/json');
