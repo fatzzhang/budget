@@ -2,3 +2,5 @@
 *.DS_STORE
 
 www/assets
+assets/node_modules
+assets/dist
