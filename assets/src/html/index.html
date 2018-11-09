@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>預算表V2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="page">
+        <h3>溫暖的窩預算計算表V2</h3>
+        <div class="howmuch">
+            <div class="alert alert-primary" id="demo" role="alert">
+                <input class="form-control" id="money" type="text" placeholder="還有多少錢?" readonly>
+            </div>
+        </div>
+        <div class="data">
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseE" role="button" aria-expanded="false" aria-controls="collapseE">
+					想花錢了嗎
+				</a>
+            </p>
+            <div class="collapse" id="collapseE">
+                <h4>你買了什麼呀?</h4>
+                <hr>
+                <input type="buyWT" class="form-control" id="buyWT" aria-describedby="buyWT" placeholder="又帶了什麼垃圾回家">
+                <h4>花了多少錢?</h4>
+                <hr>
+                <input type="span" class="form-control" id="span" aria-describedby="span$" placeholder="看看你空空如也的錢包">
+                <h4>備註</h4>
+                <hr>
+                <input type="note" class="form-control" id="note" aria-describedby="note" placeholder="你這敗家的還有什麼要說的嗎">
+                <div class="btn btn-secondary btn-sm" id="definite" data-toggle="collapse" href="#collapseE" role="button" aria-expanded="false" aria-controls="collapseE">
+                    確定</div>
+            </div>
+        </div>
+        <hr>
+        <div class="item">
+            <h1 class="fas fa-piggy-bank fa-3x">顯示過去的購物紀錄</h1>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>物品</th>
+                        <th>金額</th>
+                        <th>備註</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>麵包</td>
+                        <td>25</td>
+                        <td>假的</td>
+                        <td class="btn btn-danger">delete</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
