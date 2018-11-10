@@ -43,6 +43,16 @@ if (isDev()) {
     });
 }
 
+if (isset($_SERVER['HTTP_HOST'])) {
+    if (in_array($_SERVER['HTTP_HOST'], ['local.budget.tw'])) {
+        $f3->set('CORS.credentials', true);
+        $f3->set('CORS.origin', $_SERVER['HTTP_ORIGIN']);
+        $f3->set('CORS.headers', 'X-Requested-With, Content-Type, Origin, Accept, Content-Range, Content-Disposition, X-Requested-Token');
+        $f3->set('CORS.expose', 'true');
+        $f3->set('CORS.ttl', '86400');
+    }
+}
+
 //config
 $f3->config(__DIR__ . '/../configs/' . $env . '.cfg');
 

@@ -6,7 +6,8 @@ config.devServer = {
   contentBase: path.join(__dirname, '../dist'),
   open: true,
   // compress: true,
-  port: 9000
+  port: 9000,
+  host: 'local.budget.tw'
 }
 
 

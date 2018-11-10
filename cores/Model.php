@@ -3,9 +3,11 @@ namespace FATZ;
 
 class Model extends Module
 {
-    public static function result(array $condition)
+    public static function result(array $condition = [], $cols = '*', $child_tbl = '')
     {
-        md()->select();
+        $tbl = self::getTable($child_tbl);
+        $data = md()->select($tbl, $cols, $condition);
+        return $data;
     }
 
     public static function save($data, $child_tbl = '')

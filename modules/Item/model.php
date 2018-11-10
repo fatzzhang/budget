@@ -8,7 +8,8 @@ class mItem extends Model
 
     public static function all()
     {
-        return parent::result();
+        $data = parent::result();
+        return $data;
     }
 
     public static function set($data)

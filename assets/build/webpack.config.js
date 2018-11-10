@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     path: dist,
-    filename: "[name].bundle.js"
+    filename: "[name].[contenthash].bundle.js"
   },
   module: {
     rules: [{
