@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
 
 const src = path.resolve(__dirname, "../src");
 const dist = path.resolve(__dirname, '../dist');
@@ -7,7 +8,7 @@ const dist = path.resolve(__dirname, '../dist');
 
 module.exports = {
   entry: {
-    main: path.join(src, "js/index.js"),
+    main: path.join(src, "js/main.js"),
   },
   output: {
     path: dist,
@@ -26,6 +27,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(src, 'html/index.html'),
       filename: 'index.html',
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
     })
   ]
 }
