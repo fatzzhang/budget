@@ -23,22 +23,49 @@
         </div>
         <div class="data">
             <p>
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseE" role="button" aria-expanded="false" aria-controls="collapseE">
-					想花錢了嗎
+                <a class="btn btn-success" data-toggle="collapse" href="#collapse_income" role="button" aria-expanded="false" aria-controls="collapseE">
+					收入
+                </a>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapse_expend" role="button" aria-expanded="false" aria-controls="collapseE">
+					支出
 				</a>
             </p>
-            <div class="collapse" id="collapseE">
-                <h4>你買了什麼呀?</h4>
-                <hr>
-                <input type="buyWT" class="form-control" id="buyWT" aria-describedby="buyWT" placeholder="又帶了什麼垃圾回家">
-                <h4>花了多少錢?</h4>
-                <hr>
-                <input type="span" class="form-control" id="span" aria-describedby="span$" placeholder="看看你空空如也的錢包">
-                <h4>備註</h4>
-                <hr>
-                <input type="note" class="form-control" id="note" aria-describedby="note" placeholder="你這敗家的還有什麼要說的嗎">
-                <div class="btn btn-secondary btn-sm" id="definite" data-toggle="collapse" href="#collapseE" role="button" aria-expanded="false" aria-controls="collapseE">
-                    確定</div>
+            <div class="rol">
+                <div class="col-6">
+                    <div class="collapse multi-collapse" id="collapse_income">
+                        <div class="card card-body">
+                            <h4>收入類型</h4>
+                            <hr>
+                            <input type="income_type" class="form-control" id="income_type" aria-describedby="buyWT" placeholder="薪水or其他">
+                            <h4>賺取金額</h4>
+                            <hr>
+                            <input type="income_HM" class="form-control" id="income_HM" aria-describedby="span$" placeholder="?">
+                            <h4>備註</h4>
+                            <hr>
+                            <input type="income_note" class="form-control" id="income_note" aria-describedby="note" placeholder="還有什麼">
+                            <hr>
+                            <div class="btn btn-secondary btn-sm" id="income_definite" data-toggle="collapse" href="#collapseE" role="button" aria-expanded="false" aria-controls="collapseE">確定</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="collapse multi-collapse" id="collapse_expend">
+                        <div class="card card-body">
+                            <h4>購買品項</h4>
+                            <hr>
+                            <input type="buyWT" class="form-control" id="buyWT" aria-describedby="buyWT" placeholder="又帶了什麼垃圾回家">
+                            <h4>消費金額</h4>
+                            <hr>
+                            <input type="span" class="form-control" id="span" aria-describedby="span$" placeholder="看看你空空如也的錢包">
+                            <h4>備註</h4>
+                            <hr>
+                            <input type="note" class="form-control" id="note" aria-describedby="note" placeholder="你這敗家的還有什麼要說的嗎">
+                            <hr>
+                            <div class="btn btn-secondary btn-sm" id="definite" data-toggle="collapse" href="#collapse_expend" role="button" aria-expanded="false" aria-controls="collapseE">確定</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <hr>
