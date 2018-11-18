@@ -5,29 +5,26 @@ class aItem extends Api
 {
     public static function do_list()
     {
-        // $data = mItem::lots();
-        // parent::_return(0, $data);
-        parent::_return(0, [
-            [
-                'id' => 1,
-                'name' => '手機',
-                'price' => 20000,
-                'status' => 'normal',
-                'insert_ts' => '2018-10-30 23:54:52',
-                'insert_id' => 1,
-                'update_ts' => '2018-10-30 23:54:52',
-                'update_id' => 1,
-            ],
-            [
-                'id' => 2,
-                'name' => '電腦',
-                'price' => 50000,
-                'status' => 'normal',
-                'insert_ts' => '2018-10-30 23:54:52',
-                'insert_id' => 1,
-                'update_ts' => '2018-10-30 23:54:52',
-                'update_id' => 1,
-            ],
+        $data = mItem::all();
+        parent::_return(0, $data);
+    }
+
+    public static function do_set()
+    {
+        $need = ['name', 'price'];
+
+        $req = parent::_getReq('POST', array_merge($need));
+        parent::_chkReq($req, $need);
+
+        $res = mItem::set([
+            'name' => $req['name'],
+            'price' => $req['price'],
         ]);
+
+        if ($res === false) {
+            parent::_return(9100);
+        }
+
+        parent::_return(0);
     }
 }

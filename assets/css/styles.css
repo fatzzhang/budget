@@ -1,47 +1,46 @@
-@charset "UTF-8";
 * {
-  /*border: 1px solid #000;*/
-  vertical-align: middle;
-  position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 微軟正黑體;
+    /*border: 1px solid #000;*/
+    vertical-align: middle
+    position: relative
+    box-sizing: border-box
+    font-family: 微軟正黑體    
 }
 
-html,
-body {
-  border: 1px solid #000;
+
+html,body {
+    border: 1px solid #000
 }
 
 .page {
-  padding: 100px;
+    padding: 100px
 }
 
 .data {
-  /* border-bottom: 1px solid #000; */
-  padding-bottom: 10px;
+    /* border-bottom: 1px solid #000; */
+    padding-bottom: 10px
 }
+    
 
 h1 {
-  color: red;
+    color: red
 }
 
 h4 {
-  /*text-align: center;*/
-  margin: 30px;
-  width: 70%;
+    /*text-align: center;*/
+    margin: 30px
+    width: 70%
 }
+    
 
 hr {
-  background-color: linear-gradient(right, #ccc, #333, #ccc);
+    background-color: linear-gradient(right, #ccc, #333, #ccc)
 }
 
-#buyWT,
-#span,
-#note {
-  margin: 20px 50px;
-  width: 70%;
+#buyWT,#span,#note {
+    margin: 20px 50px
+    width: 70%
 }
+    
+
 
 /*linear-gradient(to right, #ccc, #333, #ccc);*/
-/*# sourceMappingURL=styles.css.map */

@@ -4,8 +4,16 @@ namespace FATZ;
 class mItem extends Model
 {
     const MT = 'item';
-    public static function lots()
+    const PK = 'id';
+
+    public static function all()
     {
-        return parent::result();
+        $data = parent::result();
+        return $data;
+    }
+
+    public static function set($data)
+    {
+        return self::save($data);
     }
 }
