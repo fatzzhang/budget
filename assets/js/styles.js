@@ -51,6 +51,26 @@ $.ajax({
 //     data: [{}, {}, {}]
 // }
 
+$("#income_definite").click(
+    function() {
+        var x = $("#income_type").val();
+        var y = $("#income_HM").val();
+        var z = $("#income_note").val();
+
+        console.log(x);
+        console.log(y);
+        console.log(z);
+        var txt1 = $("<td></td>").text(x);
+        var txt2 = $("<td></td>").text(y);
+        var txt3 = $("<td></td>").text(z);
+        var txt4 = $("<td class='btn btn-danger delete'></td>").text("delete")
+        var tt = $("<tr></tr>").append(txt1, txt2, txt3, txt4);
+        console.log(tt);
+        $("tbody").append(tt);
+
+        $("#income_type, #income_HM, #income_note").val("");
+    }
+)
 
 $("#definite").click(
     function() {
@@ -66,9 +86,11 @@ $("#definite").click(
         var txt1 = $("<td></td>").text(x);
         var txt2 = $("<td></td>").text(y);
         var txt3 = $("<td></td>").text(z);
-        var txt4 = $("<td class='btn btn-danger'></td>").text("delete")
+        var txt4 = $("<td class='btn btn-danger delete'></td>").text("delete")
         var tt = $("<tr></tr>").append(txt1, txt2, txt3, txt4);
         console.log(tt);
         $("tbody").append(tt);
+
+        $("#buyWT, #span, #note").val("");
     }
 )
