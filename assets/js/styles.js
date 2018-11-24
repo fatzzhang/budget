@@ -13,7 +13,7 @@
 // document.getElementById("demo").innerHTML = 55555;
 
 $.ajax({
-        url: 'http://local.budget.tw/api/item/set',
+        url: 'https://local.budget.tw/api/item/set',
         type: 'post',
         data: { id: 1 },
         success: function(response) {
