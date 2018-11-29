@@ -8,22 +8,7 @@
 }
 
 html, body {
-  border: 1px solid #000;
-}
-
-.data {
-  /* border-bottom: 1px solid #000; */
-  padding-bottom: 10px;
-}
-
-h1 {
-  color: red;
-}
-
-h4 {
-  /*text-align: center;*/
-  margin: 30px;
-  width: 70%;
+  text-align: center;
 }
 
 hr {
@@ -32,6 +17,33 @@ hr {
 
 .hilight {
   background-color: yellow;
+}
+
+header.jumbotron {
+  text-align: center;
+}
+
+header.jumbotron .container-fluid {
+  padding: 10px 0px;
+}
+
+header.jumbotron .container-fluid h1 {
+  padding-top: 15px;
+  display: inline;
+}
+
+header.jumbotron .container-fluid input {
+  text-align: center;
+}
+
+section#data {
+  /* border-bottom: 1px solid #000; */
+  padding-bottom: 10px;
+}
+
+section#data h4 {
+  margin: 30px;
+  width: 70%;
 }
 
 /*linear-gradient(to right, #ccc, #333, #ccc);*/

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
     <title>預算表V2</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -14,89 +15,94 @@
 </head>
 
 <body>
-    <div class="page">
-        <header class="jumbotron">
-            <div class="container">
-                <h3>溫暖的窩預算計算表V2</h3>
-                <div class="howmuch">
-                    <div class="alert alert-primary" id="demo" role="alert">
-                        <input class="form-control" id="money" type="text" value="20000" placeholder="還有多少錢?" readonly>
-                        <!-- <div id="input" type="text">300</div> -->
-                    </div>
-                </div>
+    <header class="jumbotron">
+        <div class="container-fluid row">
+            <div class="col-sm-6">
+                <i class="fas fa-hand-holding-usd fa-3x"></i>
+                <h1>溫暖的窩預算計算表V2</h1>
             </div>
-        </header>
-        <div class="data container">
-            <p>
-                <a class="btn btn-success" data-toggle="collapse" href="#collapse_income" role="button" aria-expanded="false" aria-controls="collapseE">
+
+            <div class="col-sm-6">
+                <h4 class="col">帳戶剩餘:</h4>
+                <!-- <div class="alert alert-primary" id="demo" role="alert"> -->
+                <input class="form-control form-control-lg" id="money" type="text" value="20000" placeholder="還有多少錢?" readonly>
+                <!-- </div> -->
+            </div>
+        </div>
+    </header>
+
+    <section id="data" class="data container">
+        <p>
+            <a class="btn btn-success" data-toggle="collapse" href="#collapse_income" role="button" aria-expanded="false" aria-controls="collapseE">
                     收入
                 </a>
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapse_expend" role="button" aria-expanded="false" aria-controls="collapseE">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapse_expend" role="button" aria-expanded="false" aria-controls="collapseE">
                     支出
                 </a>
-                <a class="btn btn-warning" id="clear" data-toggle="collapse" href="#collapse_clear" role="button" aria-expanded="false" aria-controls="collapseE">
-                    清空
+            <a class="btn btn-warning" id="clear" data-toggle="collapse" href="#collapse_clear" role="button" aria-expanded="false" aria-controls="collapseE">
+                    清空收支紀錄
                 </a>
-            </p>
-            <div class="row">
-                <div class="col-6">
-                    <div class="collapse multi-collapse" id="collapse_income">
-                        <div class="card card-body">
-                            <h4>收入類型</h4>
-                            <input type="income_type" class="form-control" id="income_type" aria-describedby="buyWT" placeholder="薪水or其他">
-                            <hr>
-                            <h4>賺取金額</h4>
-                            <input type="income_HM" class="form-control" id="income_HM" aria-describedby="span$" placeholder="$">
-                            <hr>
-                            <h4>備註</h4>
-                            <input type="income_note" class="form-control" id="income_note" aria-describedby="note" placeholder="還有什麼">
-                            <hr>
-                            <div class="btn btn-secondary btn-sm" id="income_definite" data-toggle="collapse" href="#collapse_income" role="button" aria-expanded="false" aria-controls="collapseE">確定</div>
-                        </div>
+        </p>
+        <div class="row">
+            <div class="col-6">
+                <div class="collapse multi-collapse" id="collapse_income">
+                    <div class="card card-body">
+                        <h4>收入類型</h4>
+                        <input type="income_type" class="form-control" id="income_type" aria-describedby="buyWT" placeholder="薪水or其他">
+                        <hr>
+                        <h4>賺取金額</h4>
+                        <input type="income_HM" class="form-control" id="income_HM" aria-describedby="span$" placeholder="$">
+                        <hr>
+                        <h4>備註</h4>
+                        <input type="income_note" class="form-control" id="income_note" aria-describedby="note" placeholder="還有什麼">
+                        <hr>
+                        <div class="btn btn-secondary btn-sm" id="income_definite" data-toggle="collapse" href="#collapse_income" role="button" aria-expanded="false" aria-controls="collapseE">確定</div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="collapse multi-collapse" id="collapse_expend">
-                        <div class="card card-body">
-                            <h4>購買品項</h4>
-                            <input type="buyWT" class="form-control" id="buyWT" aria-describedby="buyWT" placeholder="又帶了什麼垃圾回家">
-                            <hr>
-                            <h4>消費金額</h4>
-                            <input type="span" class="form-control" id="span" aria-describedby="span$" placeholder="看看你空空如也的錢包">
-                            <hr>
-                            <h4>備註</h4>
-                            <input type="note" class="form-control" id="note" aria-describedby="note" placeholder="你這敗家的還有什麼要說的嗎">
-                            <hr>
-                            <div class="btn btn-secondary btn-sm" id="definite" data-toggle="collapse" href="#collapse_expend" role="button" aria-expanded="false" aria-controls="collapseE">確定</div>
-                        </div>
+            </div>
+            <div class="col-6">
+                <div class="collapse multi-collapse" id="collapse_expend">
+                    <div class="card card-body">
+                        <h4>購買品項</h4>
+                        <input type="buyWT" class="form-control" id="buyWT" aria-describedby="buyWT" placeholder="又帶了什麼垃圾回家">
+                        <hr>
+                        <h4>消費金額</h4>
+                        <input type="span" class="form-control" id="span" aria-describedby="span$" placeholder="看看你空空如也的錢包">
+                        <hr>
+                        <h4>備註</h4>
+                        <input type="note" class="form-control" id="note" aria-describedby="note" placeholder="你這敗家的還有什麼要說的嗎">
+                        <hr>
+                        <div class="btn btn-secondary btn-sm" id="definite" data-toggle="collapse" href="#collapse_expend" role="button" aria-expanded="false" aria-controls="collapseE">確定</div>
                     </div>
                 </div>
             </div>
         </div>
-        <hr>
-        <div class="item container">
-            <h1 class="fas fa-piggy-bank fa-3x">顯示過去的購物紀錄</h1>
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>物品</th>
-                        <th>金額</th>
-                        <th>備註</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="">
-                        <td>麵包</td>
-                        <td>25</td>
-                        <td>假的</td>
-                        <td class="btn btn-danger delete">delete</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    </section>
+    <hr>
 
-    </div>
+    <section id="item" class="item container">
+        <h1 class="fas fa-piggy-bank fa-3x">顯示過去的購物紀錄</h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>物品</th>
+                    <th>金額</th>
+                    <th>備註</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td>麵包</td>
+                    <td>25</td>
+                    <td>假的</td>
+                    <td class="btn btn-danger delete">delete</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
 
     <script src="../assets/js/styles.js"></script>
 </body>
