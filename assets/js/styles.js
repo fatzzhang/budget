@@ -51,6 +51,7 @@ $.ajax({
 //     data: [{}, {}, {}]
 // }
 
+
 $("#income_definite").click(
     function() {
         var x = $("#income_type").val();
@@ -69,6 +70,12 @@ $("#income_definite").click(
         $("tbody").append(tt);
 
         $("#income_type, #income_HM, #income_note").val("");
+
+        var moneyX = $("#money").val();
+        console.log(moneyX);
+        var moneyY = moneyX * 1 + y * 1;
+        $("#money").val(moneyY);
+        console.log(moneyY);
     }
 )
 
@@ -92,5 +99,33 @@ $("#definite").click(
         $("tbody").append(tt);
 
         $("#buyWT, #span, #note").val("");
+
+        var moneyX = $("#money").val();
+        console.log(moneyX);
+        var moneyY = moneyX - y;
+        $("#money").val(moneyY);
+        console.log(moneyY);
     }
 )
+
+$("#clear").click(
+    function() {
+        $("tbody").remove();
+    }
+)
+
+// $(".delete").click(
+//     function() {
+//         $("td.delete").closest("tr").addClass("hilight");
+//     }
+// )
+
+$(document).on("click", ".delete", function() {
+    // $(this).remove();
+    // $(this).closest("tr").addClass("hilight");
+    $(this).closest("tr").remove();
+});
+
+// $(".delete").live("click", function() {
+//     $("td.delete").closest("tr").addClass("hilight");
+// }); <<<不懂這段為何不能執行

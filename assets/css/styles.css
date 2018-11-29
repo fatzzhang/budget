@@ -30,5 +30,9 @@ hr {
   background-color: linear-gradient(right, #ccc, #333, #ccc);
 }
 
+.hilight {
+  background-color: yellow;
+}
+
 /*linear-gradient(to right, #ccc, #333, #ccc);*/
 /*# sourceMappingURL=styles.css.map */

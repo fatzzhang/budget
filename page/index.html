@@ -20,7 +20,8 @@
                 <h3>溫暖的窩預算計算表V2</h3>
                 <div class="howmuch">
                     <div class="alert alert-primary" id="demo" role="alert">
-                        <input class="form-control" id="money" type="text" placeholder="還有多少錢?" readonly>
+                        <input class="form-control" id="money" type="text" value="20000" placeholder="還有多少錢?" readonly>
+                        <!-- <div id="input" type="text">300</div> -->
                     </div>
                 </div>
             </div>
@@ -32,6 +33,9 @@
                 </a>
                 <a class="btn btn-primary" data-toggle="collapse" href="#collapse_expend" role="button" aria-expanded="false" aria-controls="collapseE">
                     支出
+                </a>
+                <a class="btn btn-warning" id="clear" data-toggle="collapse" href="#collapse_clear" role="button" aria-expanded="false" aria-controls="collapseE">
+                    清空
                 </a>
             </p>
             <div class="row">
@@ -82,12 +86,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr>
+                    <tr class="">
                         <td>麵包</td>
                         <td>25</td>
                         <td>假的</td>
-                        <td class="btn btn-danger">delete</td>
-                    </tr> -->
+                        <td class="btn btn-danger delete">delete</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
