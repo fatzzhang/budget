@@ -129,3 +129,16 @@ $(document).on("click", ".delete", function() {
 // $(".delete").live("click", function() {
 //     $("td.delete").closest("tr").addClass("hilight");
 // }); <<<不懂這段為何不能執行
+
+
+$(document).ready(function() {
+    if ($(window).width() < 769) {
+        $("header h1").css("font-size", "24px");
+
+        $("section#item h1").css("font-size", "28px");
+    } else {
+        $("header h1").css("font-size", "58px");
+
+        $("section#item h1").css("font-size", "60px");
+    }
+});

@@ -1,3 +1,8 @@
+$bgc_purple: #13001a
+$bgc_green: #ccffdd
+$bgc_blue: #cce0ff
+
+    
 *
     // border: 1px solid #000
     vertical-align: middle
@@ -22,12 +27,16 @@ hr
 header.jumbotron
     text-align: center
     // margin-bottom: 0px
+    background-color: $bgc_purple
     .container-fluid
-        // color: white
-        padding: 10px 0px
+        padding: 20px 0px
+        color: white
         h1
-            padding-top: 15px
+            padding: 15px
             display: inline
+            font-size: initial
+            font-weight: bold
+            // color: white
         input
             text-align: center
 
@@ -41,8 +50,18 @@ section#data
         margin: 30px
         width: 70%
 
+section#data
+    div#collapse_income
+        .card
+            background-color: $bgc_green
+    div#collapse_expend
+        .card
+            background-color: $bgc_blue
 
-
+section#item
+    h1
+        font-size: initial
+        font-weight: bold
 
 // #buyWT,#span,#note
 //     margin: 20px 50px

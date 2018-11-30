@@ -21,15 +21,19 @@ hr {
 
 header.jumbotron {
   text-align: center;
+  background-color: #13001a;
 }
 
 header.jumbotron .container-fluid {
-  padding: 10px 0px;
+  padding: 20px 0px;
+  color: white;
 }
 
 header.jumbotron .container-fluid h1 {
-  padding-top: 15px;
+  padding: 15px;
   display: inline;
+  font-size: initial;
+  font-weight: bold;
 }
 
 header.jumbotron .container-fluid input {
@@ -44,6 +48,19 @@ section#data {
 section#data h4 {
   margin: 30px;
   width: 70%;
+}
+
+section#data div#collapse_income .card {
+  background-color: #ccffdd;
+}
+
+section#data div#collapse_expend .card {
+  background-color: #cce0ff;
+}
+
+section#item h1 {
+  font-size: initial;
+  font-weight: bold;
 }
 
 /*linear-gradient(to right, #ccc, #333, #ccc);*/
