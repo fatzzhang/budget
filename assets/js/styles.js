@@ -58,24 +58,28 @@ $("#income_definite").click(
         var y = $("#income_HM").val();
         var z = $("#income_note").val();
 
-        console.log(x);
-        console.log(y);
-        console.log(z);
-        var txt1 = $("<td></td>").text(x);
-        var txt2 = $("<td></td>").text(y);
-        var txt3 = $("<td></td>").text(z);
-        var txt4 = $("<td class='btn btn-danger delete'></td>").text("delete")
-        var tt = $("<tr></tr>").append(txt1, txt2, txt3, txt4);
-        console.log(tt);
-        $("tbody").append(tt);
+        if (x == "" || y == "") {
 
-        $("#income_type, #income_HM, #income_note").val("");
+        } else {
+            console.log(x);
+            console.log(y);
+            console.log(z);
+            var txt1 = $("<td></td>").text(x);
+            var txt2 = $("<td></td>").text(y);
+            var txt3 = $("<td></td>").text(z);
+            var txt4 = $("<td class='btn btn-danger delete'></td>").text("delete")
+            var tt = $("<tr></tr>").append(txt1, txt2, txt3, txt4);
+            console.log(tt);
+            $("tbody").append(tt);
 
-        var moneyX = $("#money").val();
-        console.log(moneyX);
-        var moneyY = moneyX * 1 + y * 1;
-        $("#money").val(moneyY);
-        console.log(moneyY);
+            $("#income_type, #income_HM, #income_note").val("");
+
+            var moneyX = $("#money").val();
+            console.log(moneyX);
+            var moneyY = moneyX * 1 + y * 1;
+            $("#money").val(moneyY);
+            console.log(moneyY);
+        }
     }
 )
 
@@ -86,25 +90,28 @@ $("#definite").click(
         var z = $("#note").val();
         // $(":text").val($("#buyWT").val() + $("#span").val() + $("#note").val());
         // $(":text").val(x + y + z);
+        if (x == "" || y == "") {
 
-        console.log(x);
-        console.log(y);
-        console.log(z);
-        var txt1 = $("<td></td>").text(x);
-        var txt2 = $("<td></td>").text(y);
-        var txt3 = $("<td></td>").text(z);
-        var txt4 = $("<td class='btn btn-danger delete'></td>").text("delete")
-        var tt = $("<tr></tr>").append(txt1, txt2, txt3, txt4);
-        console.log(tt);
-        $("tbody").append(tt);
+        } else {
+            console.log(x);
+            console.log(y);
+            console.log(z);
+            var txt1 = $("<td></td>").text(x);
+            var txt2 = $("<td></td>").text(y);
+            var txt3 = $("<td></td>").text(z);
+            var txt4 = $("<td class='btn btn-danger delete'></td>").text("delete")
+            var tt = $("<tr></tr>").append(txt1, txt2, txt3, txt4);
+            console.log(tt);
+            $("tbody").append(tt);
 
-        $("#buyWT, #span, #note").val("");
+            $("#buyWT, #span, #note").val("");
 
-        var moneyX = $("#money").val();
-        console.log(moneyX);
-        var moneyY = moneyX - y;
-        $("#money").val(moneyY);
-        console.log(moneyY);
+            var moneyX = $("#money").val();
+            console.log(moneyX);
+            var moneyY = moneyX - y;
+            $("#money").val(moneyY);
+            console.log(moneyY);
+        }
     }
 )
 
